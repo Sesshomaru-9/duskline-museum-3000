@@ -39,7 +39,8 @@ def save_label(directory: str) -> bool:
 
 
 def main() -> int:
-    # Kegagalan menulis bukan alasan untuk crash: diam-diam selesai.
+    # Gate keluaran: kalau direktori keluaran tak bisa ditulis, program
+    # tetap selesai dengan exit 0 — gagal menulis bukan alasan crash.
     save_label(target_dir())
     return 0
 
